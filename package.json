@@ -1,0 +1,26 @@
+{
+  "name": "intake-app",
+  "version": "0.0.1",
+  "description": "Intake app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:reneweteling/intake-app-frontend.git"
+  },
+  "author": "Rene Weteling & Daan Tuynman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reneweteling/intake-app-frontend/issues"
+  },
+  "homepage": "https://github.com/reneweteling/intake-app-frontend",
+  "dependencies": {
+    "bootstrap": "^3.3.5",
+    "gulp": "^3.9.0",
+    "gulp-browserify": "^0.5.1",
+    "react": "^0.13.3",
+    "reactify": "^1.1.1"
+  }
+}
