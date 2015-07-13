@@ -1,4 +1,5 @@
 var gulp    = require('gulp'),
+rename      = require('gulp-rename')
 sass        = require('gulp-sass'),
 browserify  = require('gulp-browserify'),
 reactify    = require('reactify'),
@@ -8,7 +9,7 @@ livereload  = require('gulp-livereload');
 livereload({ start: true })
 
 gulp.task('scripts', function() {
-  gulp.src('src/js/main.js')
+  gulp.src('src/js/app.js')
   .pipe(sourcemaps.init())
   .pipe(browserify({
     insertGlobals: false,
@@ -16,12 +17,13 @@ gulp.task('scripts', function() {
     transform: [reactify]
   }))
   .pipe(sourcemaps.write())
+  .pipe(rename('main.js'))
   .pipe(gulp.dest('./dist/assets/js'))
   .pipe(livereload());
 });
 
 gulp.task('sass', function () {
-  gulp.src('src/sass/app.sass')
+  gulp.src('src/style/main.sass')
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(sourcemaps.write())
