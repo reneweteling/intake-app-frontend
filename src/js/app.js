@@ -54,8 +54,11 @@ var routes = (
 
 var RouteHandler = Router.RouteHandler;
 
+window.onload = function(){
+  Router.run(routes, Router.HashLocation, function(Root){
+    React.render(<Root/>, document.body);
+  });  
+  console.log(123);
+};
 
-Router.run(routes, Router.HashLocation, function(Root){
-  React.render(<Root/>, document.body);
-});
    
